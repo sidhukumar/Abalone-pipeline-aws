@@ -6,7 +6,7 @@ Resources:
     Properties: 
       BucketName: !Join
         - "-"
-        - - "mlops-code-Abalone"
+        - - "mlops-code-abalone"
           - !Select
             - 0
             - !Split
