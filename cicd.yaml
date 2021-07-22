@@ -183,7 +183,7 @@ Resources:
   ECR:
     Type: AWS::ECR::Repository
     Properties: 
-      RepositoryName: mlops-image
+      RepositoryName: mlops-abalone
 
   ECRSSM:
      Type: AWS::SSM::Parameter

@@ -8,6 +8,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - export AWS_ACCOUNT=$(aws sts get-caller-identity | jq -r '.Account')
       - echo "AWS_ACCOUNT is $AWS_ACCOUNT"
+      - pip install --upgrade --force-reinstall botocore boto3 awscli
       - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT.dkr.ecr.$AWS_REGION.amazonaws.com
   build:
     commands:
